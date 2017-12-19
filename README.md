@@ -5,7 +5,7 @@ Python commands is a light-weight, django-admin inspired, CLI Command tool.
 # Usage
 
 ```sh
-pip install git+ssh://git@github.com/newcraftgroup/nci-python-commands.git
+pip install nci-python-commands
 manage
 ```
 
