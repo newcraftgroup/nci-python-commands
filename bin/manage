@@ -26,6 +26,7 @@ from confload import Config
 
 sys.path.append(os.getcwd())
 
+
 def create_config():
     if os.path.isfile('config.yml'):
         return
