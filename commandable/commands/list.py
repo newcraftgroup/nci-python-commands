@@ -17,4 +17,5 @@ from commandable import Help
 
 class List(Help):
     description = "(alias help) Shows a list of all available commands"
+    hidden = True
     pass

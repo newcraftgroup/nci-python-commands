@@ -20,6 +20,7 @@ import os
 
 class Command:
     description = "No description"
+    hidden = False
 
     def __init__(self, args=None):
         if args is None:

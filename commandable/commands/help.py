@@ -39,7 +39,7 @@ class Help(Command):
                 cmd = getattr(command_module, ''.join(word.capitalize() for word in modname.split("_")))
                 instance = cmd()
 
-                if isinstance(instance, Command):
+                if isinstance(instance, Command) and cmd.hidden is False:
                     print("({}) \033[1m{}\033[0m - {}".format(namespace, modname, cmd.description))
 
         print("\n")
