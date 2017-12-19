@@ -67,3 +67,12 @@ class PrintMyNumber(Command):
 
         print("Your lucky number is: {}".format(self.get("mynumber"))) #Your lucky number is: 2
 ```
+
+# Hide Commands
+```
+class PrintMyNumber(Command):
+    description = "A description of your command"
+
+    hidden = True
+...
+```
