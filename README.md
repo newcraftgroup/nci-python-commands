@@ -23,16 +23,12 @@ manage my-command-name
 
 1. Create File
 
-Within your project, create a new package directory. The only requirement here is for the package to follow python standard and therefore to include a __init__.py file.
-
-Within this directory, add a number of files each representing a command. The name of these files need to be an underscore representation of the Camel Case class name it will contain.
-
 You can create a blank command by typing the following:
 ```sh
 manage create_command
 ```
 
-2. Command Code
+2. Example Code
 
 In print_my_number.py:
 ```python
