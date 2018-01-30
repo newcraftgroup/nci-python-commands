@@ -72,3 +72,17 @@ class PrintMyNumber(Command):
     hidden = True
 ...
 ```
+
+# Adding existing commands to you configuration
+
+In the section `Commands` add the module names that need to be scanned for commands and add a readable name as value.
+```yaml
+Commands:
+  modulename: "module.path"
+  downloaddata: "download.data"
+  importers: "import_data"
+```
+
+
+
+
