@@ -17,7 +17,7 @@ from setuptools import setup
 
 options = {
     "name": "nci-python-commands",
-    "version": "1.0.7",
+    "version": "1.0.8",
     "description": "An object orientated CLI command library",
     "url": "https://github.com/newcraftgroup/nci-python-commands",
     "author": 'NEWCRAFT',

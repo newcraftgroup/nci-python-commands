@@ -16,15 +16,17 @@
 
 import io
 import logging
-
+import logging.config
 import os
-
 import sys
 
-from commandable import CommandLoader
 from confload import Config
 
+from commandable import CommandLoader
+
 sys.path.append(os.getcwd())
+
+logger = logging.getLogger(__name__)
 
 
 def create_config():
@@ -39,9 +41,14 @@ def create_config():
 
 
 class App:
+
     def __init__(self, cli: bool):
         self.cli = cli
-        logging.basicConfig(format='%(asctime)s - %(name)s - %(levelname)s - %(message)s')
+        if os.path.isfile('logger.ini'):
+            logging.config.fileConfig('logger.ini')
+        else:
+            logging.basicConfig(format='%(asctime)s - %(name)s - %(levelname)s - %(message)s', level=logging.INFO)
+            logger.info('Using default log configuration; override in a config.ini')
 
     def start(self) -> None:
         create_config()
@@ -51,6 +58,7 @@ class App:
         try:
             commands = list(Config.get("Commands").values())
         except Exception:
+            logger.warn('No commands configured')
             commands = []
 
         if self.cli:
