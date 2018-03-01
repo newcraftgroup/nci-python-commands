@@ -12,4 +12,4 @@
 #   See the License for the specific language governing permissions and
 #   limitations under the License.
 
-from .command_loader import CommandLoader
+from .command_loader import CommandLoader, Command
