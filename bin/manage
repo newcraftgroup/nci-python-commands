@@ -58,7 +58,7 @@ class App:
         try:
             commands = list(Config.get("Commands").values())
         except Exception:
-            logger.warn('No commands configured')
+            logger.warning('No commands configured')
             commands = []
 
         if self.cli:
